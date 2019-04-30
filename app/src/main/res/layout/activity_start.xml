@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#1d7874"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:context=".StartActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/title1"
+        android:text="Free"
+        android:textSize="50dp"
+        android:gravity="center"
+        android:textColor="#ffffff"
+        android:fontFamily="@font/comfortaa_regular"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/title2"
+        android:text="Mind"
+        android:textSize="50dp"
+        android:gravity="center"
+        android:textColor="#ffffff"
+        android:fontFamily="@font/comfortaa_regular"/>
+
+    <Button
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:id="@+id/login"
+        android:textSize="20dp"
+        android:textColor="#ffffff"
+        android:text="LOGIN"
+        android:background="@drawable/button_bg_1"
+        android:layout_marginTop="100dp"
+        android:fontFamily="@font/comfortaa_regular"/>
+
+    <Button
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:id="@+id/register"
+        android:text="REGISTER"
+        android:textSize="20dp"
+        android:layout_marginTop="20dp"
+        android:textColor="#ffffff"
+        android:fontFamily="@font/comfortaa_regular"
+        android:background="@drawable/button_bg_1"/>
+
+</LinearLayout>

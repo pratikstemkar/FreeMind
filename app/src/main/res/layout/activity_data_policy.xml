@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
+    tools:context=".AdsActivity">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/bar"
+        android:background="?android:attr/windowBackground">
+
+        <android.support.v7.widget.Toolbar
+            android:layout_width="match_parent"
+            android:layout_height="45sp"
+            android:id="@+id/toolbar"
+            android:background="?android:attr/windowBackground">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Data Policy"
+                    android:fontFamily="@font/comfortaa_bold"
+                    android:textColor="#071e22"
+                    android:textSize="18sp"
+                    android:layout_centerVertical="true"/>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentEnd="true"
+                    android:id="@+id/close"
+                    android:src="@drawable/ic_close"
+                    android:layout_marginEnd="10sp"/>
+
+            </RelativeLayout>
+
+        </android.support.v7.widget.Toolbar>
+
+    </android.support.design.widget.AppBarLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/scrollbar"
+        android:layout_marginBottom="51sp"
+        android:layout_below="@+id/bar">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="This policy describes the information we process to support FreeMind and other products offered by Protex Creative."
+                android:fontFamily="@font/comfortaa_regular"
+                android:textColor="#000000"
+                android:textSize="12sp"
+                android:padding="8sp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="What kinds of information do we collect?"
+                android:fontFamily="@font/comfortaa_bold"
+                android:textColor="#000000"
+                android:padding="8sp"
+                android:layout_marginTop="8sp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="To provide the Protex Creative Products, we must process information about you. The types of information we collect depend on how you use our Products.\n\n1. Information and content you provide.\n\n2. Networks and Connections.\n\n3. Your usage.\n\n4. Things others do and information they provide about you.\n\n5. Cookie data.\n\n6. Device signals.\n\n7. Data from device settings."
+                android:fontFamily="@font/comfortaa_regular"
+                android:textSize="12sp"
+                android:padding="8sp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="How do we use this information?"
+                android:fontFamily="@font/comfortaa_bold"
+                android:textColor="#000000"
+                android:padding="8sp"
+                android:layout_marginTop="8sp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="We use the information we have to support the Protex Creative products and FreeMind in general. We provide users with a personalised environment using the information that we harness. "
+                android:fontFamily="@font/comfortaa_regular"
+                android:textSize="12sp"
+                android:padding="8sp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="How to contact Protex Creative with questions?"
+                android:fontFamily="@font/comfortaa_bold"
+                android:textColor="#000000"
+                android:padding="8sp"
+                android:layout_marginTop="8sp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="You can contact us by mail at: "
+                android:fontFamily="@font/comfortaa_regular"
+                android:textSize="12sp"
+                android:padding="8sp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/mail"
+                android:text="protexcreative@gmail.com"
+                android:fontFamily="@font/comfortaa_bold"
+                android:textColor="#1d7874"
+                android:padding="8sp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Date of Last Revision: 7 April, 2019"
+                android:textSize="12sp"
+                android:fontFamily="@font/comfortaa_regular"
+                android:textColor="#000000"
+                android:padding="8sp"/>
+
+        </LinearLayout>
+
+    </ScrollView>
+    <com.google.android.gms.ads.AdView
+        android:id="@+id/adView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        ads:adSize="BANNER"
+        ads:adUnitId="ca-app-pub-9930376729131413/8990525168"
+        android:visibility="visible"
+        android:layout_alignParentBottom="true"/>
+</RelativeLayout>

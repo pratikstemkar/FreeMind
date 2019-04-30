@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
+    android:layout_height="match_parent"
+    tools:context=".AdsActivity">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/bar"
+        android:background="?android:attr/windowBackground">
+
+        <android.support.v7.widget.Toolbar
+            android:layout_width="match_parent"
+            android:layout_height="45sp"
+            android:id="@+id/toolbar"
+            android:background="?android:attr/windowBackground">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Terms of Use"
+                    android:fontFamily="@font/comfortaa_bold"
+                    android:textColor="#071e22"
+                    android:textSize="18sp"
+                    android:layout_centerVertical="true"/>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentEnd="true"
+                    android:id="@+id/close"
+                    android:src="@drawable/ic_close"
+                    android:layout_marginEnd="10sp"/>
+
+            </RelativeLayout>
+
+        </android.support.v7.widget.Toolbar>
+
+    </android.support.design.widget.AppBarLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/scrollbar"
+        android:layout_marginBottom="51sp"
+        android:layout_below="@+id/bar">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#000000"
+                android:fontFamily="@font/comfortaa_regular"
+                android:textSize="12sp"
+                android:padding="12sp"
+                android:text="Welcome to FreeMind!\n\nThese Terms of Use govern your use of FreeMind and provide information about the FreeMind service.\n\nThe FreeMind Service is one of the Protex Creative Products, provided to you by Protex Creative, Inc. These Terms of Use therefore constitute an agreement between you and Protex Creative, Inc."/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Your Commitments"
+                android:fontFamily="@font/comfortaa_bold"
+                android:textColor="#000000"
+                android:padding="8sp"
+                android:layout_marginTop="8sp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="In return of out commitment to provide the Service, we require you to make the below commitments to us."
+                android:fontFamily="@font/comfortaa_regular"
+                android:textSize="12sp"
+                android:padding="8sp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Who can use FreeMind?"
+                android:fontFamily="@font/comfortaa_bold"
+                android:textColor="#000000"
+                android:padding="8sp"
+                android:layout_marginTop="8sp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="We want our Service to be as open and inclusive as possible, but we also want it to be safe, secure, and in accordance with the law. So, we need you to commit to a few restrictions in order to be part of the FreeMind community.\n\n   1. You must be atleast 13 years old or the minimum legal age in your country to use FreeMind.\n\n   2. We must not have previously disabled your account for violation of law or any of our policies.\n\n   3. You must not be a convicted sex offender."
+                android:fontFamily="@font/comfortaa_regular"
+                android:textSize="12sp"
+                android:padding="8sp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="How you can't use FreeMind?"
+                android:fontFamily="@font/comfortaa_bold"
+                android:textColor="#000000"
+                android:padding="8sp"
+                android:layout_marginTop="8sp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Providing a safe and open Service for a broad community requires that we all do our part.\n\n    1. You can't impersonate others or provide inaccurate information.\n\n    2. You can't do anything unlawful, misleading or fraudulent.\n\n    3. You can't attempt to create accounts or collect information in unauthorized ways.\n\n    4. You can't attempt to buy, sell or transfer any aspect of your account."
+                android:fontFamily="@font/comfortaa_regular"
+                android:textSize="12sp"
+                android:padding="8sp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Permissions You Give to Us"
+                android:fontFamily="@font/comfortaa_bold"
+                android:textColor="#000000"
+                android:padding="8sp"
+                android:layout_marginTop="8sp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="As part of our agreement, you also give us permission that we need to provide the Service.\n\n    1. We do not claim ownership of your content but you grant us a license to use it.\n\n    2. Permission to use your username, profile picture, and information about your relationships and actions with accounts, ads and sponsored posts.\n\n    3. You agree that we can download and install updates to the Service on your device."
+                android:fontFamily="@font/comfortaa_regular"
+                android:textSize="12sp"
+                android:padding="8sp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/mail"
+                android:text="protexcreative@gmail.com"
+                android:fontFamily="@font/comfortaa_bold"
+                android:textColor="#1d7874"
+                android:padding="8sp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Date of Last Revision: 7 April, 2019"
+                android:textSize="12sp"
+                android:fontFamily="@font/comfortaa_regular"
+                android:textColor="#000000"
+                android:padding="8sp"/>
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <com.google.android.gms.ads.AdView
+        android:id="@+id/adView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        ads:adSize="BANNER"
+        ads:adUnitId="ca-app-pub-9930376729131413/8325623837"
+        android:visibility="visible"
+        android:layout_alignParentBottom="true"/>
+
+</RelativeLayout>

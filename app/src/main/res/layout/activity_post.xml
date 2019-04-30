@@ -1,0 +1,696 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".PostActivity">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?android:attr/windowBackground"
+        android:id="@+id/bar">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="45sp">
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/close"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginEnd="10dp"
+                    android:src="@drawable/ic_close"
+                    android:layout_centerVertical="true"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="POST"
+                    android:id="@+id/post"
+                    android:textColor="#1d7874"
+                    android:layout_marginEnd="10dp"
+                    android:fontFamily="@font/comfortaa_bold"
+                    android:textSize="18dp"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentEnd="true"/>
+
+                <TextView
+                    android:id="@+id/new_post"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/close"
+                    android:fontFamily="@font/comfortaa_bold"
+                    android:text="New Post"
+                    android:textColor="#071e22"
+                    android:textSize="18dp" />
+
+
+            </RelativeLayout>
+
+        </android.support.v7.widget.Toolbar>
+
+
+    </android.support.design.widget.AppBarLayout>
+
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/scrollbar"
+        android:layout_below="@+id/bar"
+        android:layout_marginBottom="51dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/image_profile"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_margin="10dp"
+                    android:src="@mipmap/ic_launcher" />
+
+                <TextView
+                    android:id="@+id/username"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:fontFamily="@font/comfortaa_bold"
+                    android:text="username"
+                    android:textColor="#000000"
+                    android:textSize="16dp" />
+
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/category"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:fontFamily="@font/comfortaa_bold"
+                android:text="Relationships"
+                android:textColor="#BC0050"
+                android:textSize="12dp" />
+
+            <EditText
+                android:id="@+id/txt_post"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#BC0050"
+                android:fontFamily="@font/comfortaa_regular"
+                android:hint="Write your post here ..."
+                android:maxLines="10"
+                android:padding="10dp"
+                android:textColor="#ffffff"
+                android:textColorHint="#ffffff"
+                android:textSize="18dp" />
+
+
+            <Switch
+                android:id="@+id/switch1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:checked="false"
+                android:fontFamily="@font/comfortaa_regular"
+                android:padding="10dp"
+                android:text="Anonymous"
+                android:thumbTint="#1d7874"/>
+
+            <HorizontalScrollView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:layout_width="130dp"
+                        android:layout_height="50dp"
+                        android:layout_marginBottom="3dp"
+                        android:layout_marginTop="3dp"
+                        android:layout_marginLeft="3dp"
+                        android:layout_marginRight="3dp"
+                        android:fontFamily="@font/comfortaa_regular"
+                        android:text="Comfortaa"
+                        android:textColor="#000000"
+                        android:background="@drawable/button_selected"
+                        android:textSize="15dp"
+                        android:id="@+id/comfortaa"/>
+
+                    <Button
+                        android:layout_width="130dp"
+                        android:layout_height="50dp"
+                        android:layout_marginBottom="3dp"
+                        android:layout_marginTop="3dp"
+                        android:layout_marginLeft="3dp"
+                        android:layout_marginRight="3dp"
+                        android:fontFamily="@font/amaticsc_regular"
+                        android:text="AmaticSC"
+                        android:textColor="#000000"
+                        android:background="@drawable/button"
+                        android:textSize="15dp"
+                        android:id="@+id/amaticsc"/>
+
+                    <Button
+                        android:layout_width="130dp"
+                        android:layout_height="50dp"
+                        android:layout_marginBottom="3dp"
+                        android:layout_marginTop="3dp"
+                        android:layout_marginLeft="3dp"
+                        android:layout_marginRight="3dp"
+                        android:fontFamily="@font/astlock_regular"
+                        android:text="AstLoch"
+                        android:textColor="#000000"
+                        android:background="@drawable/button"
+                        android:textSize="15dp"
+                        android:id="@+id/astloch"/>
+
+                    <Button
+                        android:layout_width="130dp"
+                        android:layout_height="50dp"
+                        android:layout_marginBottom="3dp"
+                        android:layout_marginTop="3dp"
+                        android:layout_marginLeft="3dp"
+                        android:layout_marginRight="3dp"
+                        android:fontFamily="@font/baloo_regular"
+                        android:text="Baloo"
+                        android:textColor="#000000"
+                        android:background="@drawable/button"
+                        android:textSize="15dp"
+                        android:id="@+id/baloo"/>
+
+                    <Button
+                        android:layout_width="130dp"
+                        android:layout_height="50dp"
+                        android:layout_marginBottom="3dp"
+                        android:layout_marginTop="3dp"
+                        android:layout_marginLeft="3dp"
+                        android:layout_marginRight="3dp"
+                        android:fontFamily="@font/baloochetan_regular"
+                        android:text="BalooChetan"
+                        android:textColor="#000000"
+                        android:background="@drawable/button"
+                        android:textSize="15dp"
+                        android:id="@+id/baloochetan"/>
+
+                    <Button
+                        android:layout_width="130dp"
+                        android:layout_height="50dp"
+                        android:layout_marginBottom="3dp"
+                        android:layout_marginTop="3dp"
+                        android:layout_marginLeft="3dp"
+                        android:layout_marginRight="3dp"
+                        android:fontFamily="@font/bangers_regular"
+                        android:text="Bangers"
+                        android:textColor="#000000"
+                        android:background="@drawable/button"
+                        android:textSize="15dp"
+                        android:id="@+id/bangers"/>
+
+                    <Button
+                        android:layout_width="130dp"
+                        android:layout_height="50dp"
+                        android:layout_marginBottom="3dp"
+                        android:layout_marginTop="3dp"
+                        android:layout_marginLeft="3dp"
+                        android:layout_marginRight="3dp"
+                        android:fontFamily="@font/blackopsone_regular"
+                        android:text="BlackOps"
+                        android:textColor="#000000"
+                        android:background="@drawable/button"
+                        android:textSize="15dp"
+                        android:id="@+id/blackops"/>
+
+                    <Button
+                        android:layout_width="130dp"
+                        android:layout_height="50dp"
+                        android:layout_marginBottom="3dp"
+                        android:layout_marginTop="3dp"
+                        android:layout_marginLeft="3dp"
+                        android:layout_marginRight="3dp"
+                        android:fontFamily="@font/bowlbyone_regular"
+                        android:text="Bowl"
+                        android:textColor="#000000"
+                        android:background="@drawable/button"
+                        android:textSize="15dp"
+                        android:id="@+id/bowl"/>
+
+                    <Button
+                        android:layout_width="130dp"
+                        android:layout_height="50dp"
+                        android:layout_marginBottom="3dp"
+                        android:layout_marginTop="3dp"
+                        android:layout_marginLeft="3dp"
+                        android:layout_marginRight="3dp"
+                        android:fontFamily="@font/facinateinline_regular"
+                        android:text="Facinate"
+                        android:textColor="#000000"
+                        android:background="@drawable/button"
+                        android:textSize="15dp"
+                        android:id="@+id/facinate"/>
+
+                    <Button
+                        android:layout_width="130dp"
+                        android:layout_height="50dp"
+                        android:layout_marginBottom="3dp"
+                        android:layout_marginTop="3dp"
+                        android:layout_marginLeft="3dp"
+                        android:layout_marginRight="3dp"
+                        android:fontFamily="@font/frederickathegreat_regular"
+                        android:text="Fredericka"
+                        android:textColor="#000000"
+                        android:background="@drawable/button"
+                        android:textSize="15dp"
+                        android:id="@+id/fredericka"/>
+
+                    <Button
+                        android:layout_width="130dp"
+                        android:layout_height="50dp"
+                        android:layout_marginBottom="3dp"
+                        android:layout_marginTop="3dp"
+                        android:layout_marginLeft="3dp"
+                        android:layout_marginRight="3dp"
+                        android:fontFamily="@font/germaniaone_regular"
+                        android:text="Germania"
+                        android:textColor="#000000"
+                        android:background="@drawable/button"
+                        android:textSize="15dp"
+                        android:id="@+id/germania"/>
+
+                    <Button
+                        android:layout_width="130dp"
+                        android:layout_height="50dp"
+                        android:layout_marginBottom="3dp"
+                        android:layout_marginTop="3dp"
+                        android:layout_marginLeft="3dp"
+                        android:layout_marginRight="3dp"
+                        android:fontFamily="@font/gochihand_regular"
+                        android:text="Gochi"
+                        android:textColor="#000000"
+                        android:background="@drawable/button"
+                        android:textSize="15dp"
+                        android:id="@+id/gochi"/>
+
+                    <Button
+                        android:layout_width="130dp"
+                        android:layout_height="50dp"
+                        android:layout_marginBottom="3dp"
+                        android:layout_marginTop="3dp"
+                        android:layout_marginLeft="3dp"
+                        android:layout_marginRight="3dp"
+                        android:fontFamily="@font/greatvibes_regular"
+                        android:text="Vibes"
+                        android:textColor="#000000"
+                        android:background="@drawable/button"
+                        android:textSize="15dp"
+                        android:id="@+id/vibes"/>
+
+                    <Button
+                        android:layout_width="130dp"
+                        android:layout_height="50dp"
+                        android:layout_marginBottom="3dp"
+                        android:layout_marginTop="3dp"
+                        android:layout_marginLeft="3dp"
+                        android:layout_marginRight="3dp"
+                        android:fontFamily="@font/homemadeapples_regular"
+                        android:text="HomeMade"
+                        android:textColor="#000000"
+                        android:background="@drawable/button"
+                        android:textSize="15dp"
+                        android:id="@+id/homemade"/>
+
+                    <Button
+                        android:layout_width="130dp"
+                        android:layout_height="50dp"
+                        android:layout_marginBottom="3dp"
+                        android:layout_marginTop="3dp"
+                        android:layout_marginLeft="3dp"
+                        android:layout_marginRight="3dp"
+                        android:fontFamily="@font/indieflower_regular"
+                        android:text="Flower"
+                        android:textColor="#000000"
+                        android:background="@drawable/button"
+                        android:textSize="15dp"
+                        android:id="@+id/flower"/>
+
+                    <Button
+                        android:layout_width="130dp"
+                        android:layout_height="50dp"
+                        android:layout_marginBottom="3dp"
+                        android:layout_marginTop="3dp"
+                        android:layout_marginLeft="3dp"
+                        android:layout_marginRight="3dp"
+                        android:fontFamily="@font/luckiestguy_regular"
+                        android:text="LuckyGuy"
+                        android:textColor="#000000"
+                        android:background="@drawable/button"
+                        android:textSize="15dp"
+                        android:id="@+id/luckyguy"/>
+
+                    <Button
+                        android:layout_width="130dp"
+                        android:layout_height="50dp"
+                        android:layout_marginBottom="3dp"
+                        android:layout_marginTop="3dp"
+                        android:layout_marginLeft="3dp"
+                        android:layout_marginRight="3dp"
+                        android:fontFamily="@font/marckscript_regular"
+                        android:text="Marck"
+                        android:textColor="#000000"
+                        android:background="@drawable/button"
+                        android:textSize="15dp"
+                        android:id="@+id/marck"/>
+
+                    <Button
+                        android:layout_width="130dp"
+                        android:layout_height="50dp"
+                        android:layout_marginBottom="3dp"
+                        android:layout_marginTop="3dp"
+                        android:layout_marginLeft="3dp"
+                        android:layout_marginRight="3dp"
+                        android:fontFamily="@font/margarine_regular"
+                        android:text="Margarine"
+                        android:textColor="#000000"
+                        android:background="@drawable/button"
+                        android:textSize="15dp"
+                        android:id="@+id/margarine"/>
+
+                    <Button
+                        android:layout_width="130dp"
+                        android:layout_height="50dp"
+                        android:layout_marginBottom="3dp"
+                        android:layout_marginTop="3dp"
+                        android:layout_marginLeft="3dp"
+                        android:layout_marginRight="3dp"
+                        android:fontFamily="@font/monoton_regular"
+                        android:text="Monoton"
+                        android:textColor="#000000"
+                        android:background="@drawable/button"
+                        android:textSize="15dp"
+                        android:id="@+id/monoton"/>
+
+                    <Button
+                        android:layout_width="130dp"
+                        android:layout_height="50dp"
+                        android:layout_marginBottom="3dp"
+                        android:layout_marginTop="3dp"
+                        android:layout_marginLeft="3dp"
+                        android:layout_marginRight="3dp"
+                        android:fontFamily="@font/mrdafoe_regular"
+                        android:text="Dafoe"
+                        android:textColor="#000000"
+                        android:background="@drawable/button"
+                        android:textSize="15dp"
+                        android:id="@+id/dafoe"/>
+
+                    <Button
+                        android:layout_width="130dp"
+                        android:layout_height="50dp"
+                        android:layout_marginBottom="3dp"
+                        android:layout_marginTop="3dp"
+                        android:layout_marginLeft="3dp"
+                        android:layout_marginRight="3dp"
+                        android:fontFamily="@font/mrsshephards_regular"
+                        android:text="Shepphard"
+                        android:textColor="#000000"
+                        android:background="@drawable/button"
+                        android:textSize="15dp"
+                        android:id="@+id/shepphard"/>
+
+                    <Button
+                        android:layout_width="130dp"
+                        android:layout_height="50dp"
+                        android:layout_marginBottom="3dp"
+                        android:layout_marginTop="3dp"
+                        android:layout_marginLeft="3dp"
+                        android:layout_marginRight="3dp"
+                        android:fontFamily="@font/neucha_regular"
+                        android:text="Neucha"
+                        android:textColor="#000000"
+                        android:background="@drawable/button"
+                        android:textSize="15dp"
+                        android:id="@+id/neucha"/>
+
+                    <Button
+                        android:layout_width="130dp"
+                        android:layout_height="50dp"
+                        android:layout_marginBottom="3dp"
+                        android:layout_marginTop="3dp"
+                        android:layout_marginLeft="3dp"
+                        android:layout_marginRight="3dp"
+                        android:fontFamily="@font/pacifico_regular"
+                        android:text="Pacifico"
+                        android:textColor="#000000"
+                        android:background="@drawable/button"
+                        android:textSize="15dp"
+                        android:id="@+id/pacifico"/>
+
+                    <Button
+                        android:layout_width="130dp"
+                        android:layout_height="50dp"
+                        android:layout_marginBottom="3dp"
+                        android:layout_marginTop="3dp"
+                        android:layout_marginLeft="3dp"
+                        android:layout_marginRight="3dp"
+                        android:fontFamily="@font/patuaone_regular"
+                        android:text="Patua"
+                        android:textColor="#000000"
+                        android:background="@drawable/button"
+                        android:textSize="15dp"
+                        android:id="@+id/patua"/>
+
+                    <Button
+                        android:layout_width="130dp"
+                        android:layout_height="50dp"
+                        android:layout_marginBottom="3dp"
+                        android:layout_marginTop="3dp"
+                        android:layout_marginLeft="3dp"
+                        android:layout_marginRight="3dp"
+                        android:fontFamily="@font/poiretone_regular"
+                        android:text="Poiret"
+                        android:textColor="#000000"
+                        android:background="@drawable/button"
+                        android:textSize="15dp"
+                        android:id="@+id/poiret"/>
+
+                    <Button
+                        android:layout_width="150dp"
+                        android:layout_height="50dp"
+                        android:layout_marginBottom="3dp"
+                        android:layout_marginTop="3dp"
+                        android:layout_marginLeft="3dp"
+                        android:layout_marginRight="3dp"
+                        android:fontFamily="@font/pressstarrt2p_regular"
+                        android:text="PressStart"
+                        android:textColor="#000000"
+                        android:background="@drawable/button"
+                        android:textSize="15dp"
+                        android:id="@+id/pressstart"/>
+
+                    <Button
+                        android:layout_width="130dp"
+                        android:layout_height="50dp"
+                        android:layout_marginBottom="3dp"
+                        android:layout_marginTop="3dp"
+                        android:layout_marginLeft="3dp"
+                        android:layout_marginRight="3dp"
+                        android:fontFamily="@font/rocksalt_regular"
+                        android:text="RockSalt"
+                        android:textColor="#000000"
+                        android:background="@drawable/button"
+                        android:textSize="15dp"
+                        android:id="@+id/rocksalt"/>
+
+                    <Button
+                        android:layout_width="150dp"
+                        android:layout_height="50dp"
+                        android:layout_marginBottom="3dp"
+                        android:layout_marginTop="3dp"
+                        android:layout_marginLeft="3dp"
+                        android:layout_marginRight="3dp"
+                        android:fontFamily="@font/sacramento_regular"
+                        android:text="Sacramento"
+                        android:textColor="#000000"
+                        android:background="@drawable/button"
+                        android:textSize="15dp"
+                        android:id="@+id/sacramento"/>
+
+                    <Button
+                        android:layout_width="130dp"
+                        android:layout_height="50dp"
+                        android:layout_marginBottom="3dp"
+                        android:layout_marginTop="3dp"
+                        android:layout_marginLeft="3dp"
+                        android:layout_marginRight="3dp"
+                        android:fontFamily="@font/shadowintolight_regular"
+                        android:text="Shadow"
+                        android:textColor="#000000"
+                        android:background="@drawable/button"
+                        android:textSize="15dp"
+                        android:id="@+id/shadow"/>
+
+                    <Button
+                        android:layout_width="130dp"
+                        android:layout_height="50dp"
+                        android:layout_marginBottom="3dp"
+                        android:layout_marginTop="3dp"
+                        android:layout_marginLeft="3dp"
+                        android:layout_marginRight="3dp"
+                        android:fontFamily="@font/specialelite_regular"
+                        android:text="Elite"
+                        android:textColor="#000000"
+                        android:background="@drawable/button"
+                        android:textSize="15dp"
+                        android:id="@+id/elite"/>
+
+                </LinearLayout>
+
+            </HorizontalScrollView>
+
+            <RadioGroup
+                android:id="@+id/r1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp">
+
+                <RadioButton
+                    android:id="@+id/relationships"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#BC0050"
+                    android:checked="true"
+                    android:fontFamily="@font/comfortaa_regular"
+                    android:gravity="center"
+                    android:padding="20dp"
+                    android:text="Relationships"
+                    android:textColor="#ffffff" />
+
+                <RadioButton
+                    android:id="@+id/work"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="3dp"
+                    android:background="#ee2e31"
+                    android:fontFamily="@font/comfortaa_regular"
+                    android:gravity="center"
+                    android:padding="20dp"
+                    android:text="Work"
+                    android:textColor="#ffffff" />
+
+                <RadioButton
+                    android:id="@+id/friends"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="3dp"
+                    android:background="#fb6107"
+                    android:fontFamily="@font/comfortaa_regular"
+                    android:gravity="center"
+                    android:padding="20dp"
+                    android:text="Friends"
+                    android:textColor="#ffffff" />
+
+                <RadioButton
+                    android:id="@+id/education"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="3dp"
+                    android:background="#f3de2c"
+                    android:fontFamily="@font/comfortaa_regular"
+                    android:gravity="center"
+                    android:padding="20dp"
+                    android:text="Education"
+                    android:textColor="#ffffff" />
+
+                <RadioButton
+                    android:id="@+id/family"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="3dp"
+                    android:background="#7cb518"
+                    android:fontFamily="@font/comfortaa_regular"
+                    android:gravity="center"
+                    android:padding="20dp"
+                    android:text="Family"
+                    android:textColor="#ffffff" />
+
+                <RadioButton
+                    android:id="@+id/hopes"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="3dp"
+                    android:background="#44e5e7"
+                    android:fontFamily="@font/comfortaa_regular"
+                    android:gravity="center"
+                    android:padding="20dp"
+                    android:text="Hopes"
+                    android:textColor="#ffffff" />
+
+                <RadioButton
+                    android:id="@+id/mystory"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="3dp"
+                    android:background="#5c7aff"
+                    android:fontFamily="@font/comfortaa_regular"
+                    android:gravity="center"
+                    android:padding="20dp"
+                    android:text="My Story"
+                    android:textColor="#ffffff" />
+
+                <RadioButton
+                    android:id="@+id/mentalhealth"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="3dp"
+                    android:background="#9f7e69"
+                    android:fontFamily="@font/comfortaa_regular"
+                    android:gravity="center"
+                    android:padding="20dp"
+                    android:text="Mental Health"
+                    android:textColor="#ffffff" />
+
+            </RadioGroup>
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <com.google.android.gms.ads.AdView
+        android:id="@+id/adView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        ads:adSize="BANNER"
+        ads:adUnitId="ca-app-pub-9930376729131413/6648602746"
+        android:visibility="visible"
+        android:layout_alignParentBottom="true"/>
+
+
+
+</RelativeLayout>

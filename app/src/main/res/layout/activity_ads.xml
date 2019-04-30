@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
+    tools:context=".AdsActivity">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/bar"
+        android:background="?android:attr/windowBackground">
+
+        <android.support.v7.widget.Toolbar
+            android:layout_width="match_parent"
+            android:layout_height="45sp"
+            android:id="@+id/toolbar"
+            android:background="?android:attr/windowBackground">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Ads"
+                    android:fontFamily="@font/comfortaa_bold"
+                    android:textColor="#071e22"
+                    android:textSize="18sp"
+                    android:layout_centerVertical="true"/>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentEnd="true"
+                    android:id="@+id/close"
+                    android:src="@drawable/ic_close"
+                    android:layout_marginEnd="10sp"/>
+
+            </RelativeLayout>
+
+        </android.support.v7.widget.Toolbar>
+
+    </android.support.design.widget.AppBarLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/scrollbar"
+        android:layout_marginBottom="51sp"
+        android:layout_below="@+id/bar">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="We're working to make sure that ads stay true to the spirit of the FreeMind community."
+                android:fontFamily="@font/comfortaa_regular"
+                android:textColor="#000000"
+                android:textSize="12sp"
+                android:padding="8sp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Sponsored posts"
+                android:fontFamily="@font/comfortaa_bold"
+                android:textColor="#000000"
+                android:padding="8sp"
+                android:layout_marginTop="8sp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="You can tap on the menu icon to hide ads you don't find relevant."
+                android:fontFamily="@font/comfortaa_regular"
+                android:textSize="12sp"
+                android:padding="8sp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="How does FreeMind decide which ads to show me?"
+                android:fontFamily="@font/comfortaa_bold"
+                android:textColor="#000000"
+                android:padding="8sp"
+                android:layout_marginTop="8sp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="We want to show you ads that are interesting and relevant to you. We use Google Admob as our ads provider. Admob uses different signals to select the best ads relevent to you. It has various ad networks under it which provide ads about all businesses."
+                android:fontFamily="@font/comfortaa_regular"
+                android:textSize="12sp"
+                android:padding="8sp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="What can I do if I see an ad I don't like?"
+                android:fontFamily="@font/comfortaa_bold"
+                android:textColor="#000000"
+                android:padding="8sp"
+                android:layout_marginTop="8sp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="You can hide an ad you don't like by tapping the menu icon on the top right corner of the ad and then choosing Hide This.\n\nTo make the ads seem relevant and useful, Admob uses information about your activity on sites and apps."
+                android:fontFamily="@font/comfortaa_regular"
+                android:textSize="12sp"
+                android:padding="8sp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Does FreeMind let advertisers use my photos or posts?"
+                android:fontFamily="@font/comfortaa_bold"
+                android:textColor="#000000"
+                android:padding="8sp"
+                android:layout_marginTop="8sp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="No. You own your photos and posts. Advertising on FreeMind doesn't change this."
+                android:fontFamily="@font/comfortaa_regular"
+                android:textSize="12sp"
+                android:padding="8sp"/>
+
+        </LinearLayout>
+
+    </ScrollView>
+    <com.google.android.gms.ads.AdView
+        android:id="@+id/adView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        ads:adSize="BANNER"
+        ads:adUnitId="ca-app-pub-9930376729131413/6332572237"
+        android:visibility="visible"
+        android:layout_alignParentBottom="true"/>
+</RelativeLayout>

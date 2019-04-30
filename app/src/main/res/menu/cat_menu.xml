@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:id="@+id/all"
+        android:title="All"/>
+
+    <item android:id="@+id/relationships"
+        android:title="Relationships"/>
+
+    <item android:id="@+id/work"
+        android:title="Work"/>
+
+    <item android:id="@+id/friends"
+        android:title="Friends"/>
+
+    <item android:id="@+id/education"
+        android:title="Education"/>
+
+    <item android:id="@+id/family"
+        android:title="Family"/>
+
+    <item android:id="@+id/hopes"
+        android:title="Hopes"/>
+
+    <item android:id="@+id/mystory"
+        android:title="My Story"/>
+
+    <item android:id="@+id/mentalhealth"
+        android:title="Mental Health"/>
+
+</menu>

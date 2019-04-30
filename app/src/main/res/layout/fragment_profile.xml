@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
+    tools:context=".Fragment.ProfileFragment">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?android:attr/windowBackground"
+        android:id="@+id/bar">
+
+        <android.support.v7.widget.Toolbar
+            android:layout_width="match_parent"
+            android:layout_height="45sp"
+            android:background="?android:attr/windowBackground"
+            android:id="@+id/toolbar">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/name"
+                    android:text="FreeMind"
+                    android:layout_centerVertical="true"
+                    android:textColor="#071e22"
+                    android:textSize="18sp"
+                    android:fontFamily="@font/comfortaa_bold"/>
+
+                <ImageView
+                    android:id="@+id/update"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toLeftOf="@+id/option"
+                    android:layout_marginRight="10sp"
+                    android:src="@drawable/ic_update"
+                    android:layout_centerVertical="true"
+                    android:visibility="gone"/>
+
+                <ImageView
+                    android:id="@+id/option"
+                    android:layout_width="30sp"
+                    android:layout_height="30sp"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginRight="10sp"
+                    android:src="@drawable/ic_option"
+                    android:layout_centerVertical="true"/>
+
+
+
+            </RelativeLayout>
+
+
+
+
+        </android.support.v7.widget.Toolbar>
+    </android.support.design.widget.AppBarLayout>
+
+
+
+
+    <ScrollView
+        android:id="@+id/scrollbar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/bar"
+        android:layout_marginBottom="108dp">
+
+        <LinearLayout
+            android:id="@+id/top"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="10dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:id="@+id/rel">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/image_profile"
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
+                    android:src="@mipmap/ic_launcher"
+                    android:tint="@color/colorPrimaryDark"/>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@+id/image_profile"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/username"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/comfortaa_bold"
+                            android:text="username"
+                            android:textColor="#000000"
+                            android:textSize="15dp" />
+
+                        <ImageView
+                            android:layout_width="15dp"
+                            android:layout_height="15dp"
+                            android:layout_gravity="center"
+                            android:id="@+id/verified_img"
+                            android:src="@drawable/ic_verified"
+                            android:layout_marginLeft="4dp"
+                            android:visibility="visible"/>
+
+
+                    </LinearLayout>
+
+
+
+                    <TextView
+                        android:id="@+id/fullname"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:fontFamily="@font/comfortaa_regular"
+                        android:text="Full Name" />
+
+                    <TextView
+                        android:id="@+id/bio"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2dp"
+                        android:fontFamily="@font/comfortaa_regular"
+                        android:text="This is bio."
+                        android:textSize="12dp" />
+
+
+                    <TextView
+                        android:id="@+id/instagram"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:fontFamily="@font/comfortaa_regular"
+                        android:text="\@instagram"
+                        android:textColor="#5c7aff" />
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/rel"
+                android:id="@+id/alert"
+                android:text="Tap On The Profile Picture."
+                android:gravity="center"
+                android:visibility="gone"
+                android:fontFamily="@font/comfortaa_regular"
+                android:textColor="#1d7874"
+                android:textSize="10dp"/>
+
+            <Button
+                android:id="@+id/editprofile"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/button_bg_7"
+                android:fontFamily="@font/comfortaa_regular"
+                android:padding="5dp"
+                android:text="EDIT PROFILE"
+                android:textColor="#ffffff" />
+
+            <GridLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:columnCount="2"
+                android:padding="8dp">
+
+                <Button
+                    android:id="@+id/posts"
+                    android:layout_width="150sp"
+                    android:layout_height="110sp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/button_bg_2"
+                    android:fontFamily="@font/comfortaa_regular"
+                    android:text="0\nposts"
+                    android:textColor="#ffffff" />
+
+                <Button
+                    android:id="@+id/stars"
+                    android:layout_width="150sp"
+                    android:layout_height="110sp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="5dp"
+                    android:background="@drawable/button_bg_2"
+                    android:fontFamily="@font/comfortaa_regular"
+                    android:text="0\nstars"
+                    android:textColor="#ffffff"/>
+
+
+
+                <Button
+                    android:id="@+id/followers"
+                    android:layout_width="150sp"
+                    android:layout_height="110sp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/button_bg_2"
+                    android:fontFamily="@font/comfortaa_regular"
+                    android:text="0\nfollowers"
+                    android:textColor="#ffffff" />
+
+                <Button
+                    android:id="@+id/following"
+                    android:layout_width="150sp"
+                    android:layout_height="110sp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:background="@drawable/button_bg_2"
+                    android:fontFamily="@font/comfortaa_regular"
+                    android:text="0\nfollowing"
+                    android:textColor="#ffffff"/>
+
+            </GridLayout>
+
+
+        </LinearLayout>
+    </ScrollView>
+
+    <com.google.android.gms.ads.AdView
+        android:id="@+id/adView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        ads:adSize="BANNER"
+        android:layout_alignParentBottom="true"
+        ads:adUnitId="ca-app-pub-9930376729131413/9107245129"
+        android:visibility="visible"
+        android:layout_marginBottom="56dp"/>
+</RelativeLayout>

@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">FreeMind</string>
+    <string name="title_activity_home">HomeActivity</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="banner_ad_unit_id">ca-app-pub-9930376729131413/7287889278</string>
+
+    <string-array name="fonts">
+        <item>Comfortaa</item>
+        <item>Open Sans</item>
+    </string-array>
+
+    <string name="title_activity_dp">DPActivity</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+</resources>
